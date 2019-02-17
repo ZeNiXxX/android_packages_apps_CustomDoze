@@ -16,6 +16,16 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <Preference
+        android:key="doze_brightness"
+        android:title="@string/doze_brightness_title"
+        android:summary="@string/doze_brightness_summary">
+    <intent
+        android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+        android:targetPackage="com.custom.ambient.display"
+        android:targetClass="com.custom.ambient.display.DozeBrightness" />
+    </Preference>
+
     <SwitchPreference
         android:key="always_on_ambient"
         android:defaultValue="false"
@@ -64,13 +74,4 @@
 
     </PreferenceCategory>
 
-    <Preference
-        android:key="doze_brightness"
-        android:title="@string/doze_brightness_title"
-        android:summary="@string/doze_brightness_summary">
-    <intent
-        android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
-        android:targetPackage="com.custom.ambient.display"
-        android:targetClass="com.custom.ambient.display.DozeBrightness" />
-    </Preference>
 </PreferenceScreen>
